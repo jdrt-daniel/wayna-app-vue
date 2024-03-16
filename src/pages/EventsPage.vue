@@ -1,7 +1,7 @@
 <template>
-  <div>
-    asdasdsada
-  </div>
+    <div>
+        Events
+    </div>
 </template>
 
 <script setup lang="ts">
