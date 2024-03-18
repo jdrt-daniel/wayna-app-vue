@@ -107,8 +107,37 @@ const events = [
               <q-item-section>Daniel Rafael</q-item-section>
               <q-item-section
                 >Se unió el 11 de marza a las 17:00
-              </q-item-section> </q-item
-            ><q-item clickable v-ripple>
+              </q-item-section>
+            </q-item>
+            <q-item clickable v-ripple>
+              <q-avatar
+                size="40px"
+                font-size="20px"
+                color="white"
+                text-color="dark"
+                icon="person"
+                class="q-mr-md"
+              />
+              <q-item-section>Daniel Rafael</q-item-section>
+              <q-item-section
+                >Se unió el 11 de marza a las 17:00
+              </q-item-section>
+            </q-item>
+            <q-item clickable v-ripple>
+              <q-avatar
+                size="40px"
+                font-size="20px"
+                color="white"
+                text-color="dark"
+                icon="person"
+                class="q-mr-md"
+              />
+              <q-item-section>Daniel Rafael</q-item-section>
+              <q-item-section
+                >Se unió el 11 de marza a las 17:00
+              </q-item-section>
+            </q-item>
+            <q-item clickable v-ripple>
               <q-avatar
                 size="40px"
                 font-size="20px"
