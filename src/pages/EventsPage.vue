@@ -1,39 +1,54 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { QTableProps } from 'quasar';
-import { getUserList } from '../services/users';
+import { getList } from '../services/events';
 import DialogModule from '../components/DialogModule.vue';
 
-interface User {
+interface Event {
   id: string;
-  avatar: string;
+  image: string;
   name: string;
-  email: string;
-  username: string;
+  start_date: string;
+  end_date: string;
+  description: string;
+  serverId: string;
 }
 
 const show = ref<boolean>(false);
-const rows = ref<User[]>([]);
+const rows = ref<Event[]>([]);
 const award = ref<string>('');
 const columns = <QTableProps['columns']>[
   {
     name: 'name',
-    label: 'Nombre',
+    label: 'Nombre del evento',
     field: 'name',
     align: 'left',
     sortable: true,
   },
   {
-    name: 'email',
-    label: 'Correo',
-    field: 'email',
+    name: 'status',
+    label: 'Estado',
+    field: 'status',
     align: 'left',
     sortable: true,
   },
   {
-    name: 'username',
-    label: 'Calories',
-    field: 'username',
+    name: 'start_date',
+    label: 'Fecha inicio',
+    field: 'start_date',
+    align: 'left',
+    sortable: true,
+  },
+  {
+    name: 'end_date',
+    label: 'Fecha_fin',
+    field: 'end_date',
+    sortable: true,
+  },
+  {
+    name: 'description',
+    label: 'Descripcion',
+    field: 'description',
     sortable: true,
   },
 ];
@@ -52,7 +67,7 @@ const openDialog = () => {
 };
 
 onMounted(() => {
-  rows.value = getUserList();
+  rows.value = getList();
 });
 </script>
 
@@ -68,15 +83,21 @@ onMounted(() => {
       <q-tr :props="props">
         <q-td key="name" :props="props">
           <q-avatar size="40px" class="q-mr-sm">
-            <img :src="props.row.avatar" />
+            <img :src="props.row.image" />
           </q-avatar>
           {{ props.row.name }}
         </q-td>
-        <q-td key="email" :props="props">
-          {{ props.row.email }}
+        <q-td key="status" :props="props">
+          {{ props.row.status }}
         </q-td>
-        <q-td key="username" :props="props">
-          {{ props.row.username }}
+        <q-td key="start_date" :props="props">
+          {{ props.row.start_date }}
+        </q-td>
+        <q-td key="end_date" :props="props">
+          {{ props.row.end_date }}
+        </q-td>
+        <q-td key="description" :props="props">
+          {{ props.row.description }}
         </q-td>
       </q-tr>
     </template>
@@ -105,7 +126,7 @@ onMounted(() => {
         </q-card-section>
         <q-card-section>
           <div class="row q-col-gutter-md">
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
               <q-input
                 outlined
                 round
@@ -116,7 +137,7 @@ onMounted(() => {
                 dark
               />
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
               <q-input
                 outlined
                 round
@@ -127,7 +148,7 @@ onMounted(() => {
                 dark
               />
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
               <q-input
                 outlined
                 round
@@ -138,7 +159,7 @@ onMounted(() => {
                 dark
               />
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
               <q-input
                 outlined
                 round
@@ -149,7 +170,7 @@ onMounted(() => {
                 dark
               />
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
               <q-input
                 outlined
                 round
@@ -160,7 +181,7 @@ onMounted(() => {
                 dark
               />
             </div>
-            <div class="col-6">
+            <div class="col-md-6 col-sm-12">
               <q-input
                 outlined
                 round
