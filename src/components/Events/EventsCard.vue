@@ -17,6 +17,9 @@ defineProps<{
 
 <style lang="scss" scoped>
 .wayna-card {
-  border-radius: 1rem;
+  border-radius: 0.7rem;
+  img {
+    max-height: 200px;
+  }
 }
 </style>

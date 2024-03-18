@@ -54,7 +54,7 @@ const events = [
 </script>
 <template>
   <div class="q-my-md">
-    <q-card class="wayna-card-dashboard">
+    <q-card class="wayna-card-dashboard text-white">
       <q-card-section>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit
       </q-card-section>
@@ -78,10 +78,11 @@ const events = [
 
 <style lang="scss" scoped>
 .wayna-card-dashboard {
-  min-height: 350px;
-  background-image: url('assets/discord-background.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
+  min-height: 400px;
+  background-image: url('assets/img/discord-background.webp');
+  background-size: 65%;
+  opacity: 1;
+  background-repeat: repeat-x;
   background-position: center;
 }
 </style>

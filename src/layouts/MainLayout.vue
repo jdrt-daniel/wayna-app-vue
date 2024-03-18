@@ -1,11 +1,17 @@
 <template>
-  <q-layout view="hHh Lpr lHh">
+  <q-layout view="lHh lpR fFf">
     <q-header>
-      <q-toolbar class="bg-secondary wayna-header">
-        <q-avatar>
-          <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-        </q-avatar>
-        <q-toolbar-title> Wayna App </q-toolbar-title>
+      <q-toolbar class="bg-dark wayna-header">
+        <q-btn
+          flat
+          size="18px"
+          icon="menu"
+          color="white"
+          aria-label="Menu"
+          @click="handdleToggle"
+        />
+
+        <q-space />
 
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn round dense flat color="text-grey-7" icon="apps">
@@ -26,29 +32,24 @@
     </q-header>
 
     <q-drawer v-model="toggle" show-if-above class="bg-secondary">
+      <q-item class="q-pa-md">
+        <q-item-section top avatar>
+          <img src="src/assets/img/ISO MONO2.png" width="50px" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label class="text-h5 text-white">Wayna App</q-item-label>
+          <q-item-label caption lines="2" class="text-warning">
+            by Devtalles
+          </q-item-label>
+        </q-item-section>
+      </q-item>
       <MenuComponent />
     </q-drawer>
 
-    <q-page-container class="bg-dark">
-      <q-toolbar class="bg-dark q-pa-sm">
-        <q-btn
-          flat
-          size="18px"
-          icon="menu"
-          color="white"
-          aria-label="Menu"
-          @click="handdleToggle"
-        />
-        <div class="q-mx-md text-white text-h6">
-          <q-breadcrumbs>
-            <q-breadcrumbs-el label="Home" />
-            <q-breadcrumbs-el label="Dashboard" />
-          </q-breadcrumbs>
-        </div>
-      </q-toolbar>
-      <div class="q-pa-lg" style="height: calc(100dvh - 150px)">
+    <q-page-container class="bg-dark full-heigth">
+      <q-scroll-area class="q-px-lg" style="height: calc(100dvh - 100px)">
         <router-view />
-      </div>
+      </q-scroll-area>
     </q-page-container>
   </q-layout>
 </template>
@@ -63,3 +64,9 @@ const handdleToggle = () => {
   toggle.value = !toggle.value;
 };
 </script>
+
+<style lang="scss">
+.full-heigth {
+  height: 100dvh;
+}
+</style>

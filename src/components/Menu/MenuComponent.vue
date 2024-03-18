@@ -4,8 +4,8 @@ import LinkComponent from './LinkComponent.vue';
 const routes = [
   {
     icon: 'home',
-    name: 'Dashboard',
-    path: '/',
+    name: 'Inicio',
+    path: '/home',
   },
   {
     icon: 'people',
