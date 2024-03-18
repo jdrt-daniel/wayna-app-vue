@@ -132,7 +132,7 @@ const events = [
     <div class="col">
       <div class="row q-col-gutter-lg">
         <div
-          class="col-md-4 col-sm-4 col-xs-12"
+          class="col-lg-3 col-md-4 col-sm-4 col-xs-12"
           v-for="{ id, name, image, user } in events"
           :key="id"
         >
