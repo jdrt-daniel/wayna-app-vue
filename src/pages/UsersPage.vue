@@ -64,6 +64,9 @@ onMounted(() => {
         </q-td>
       </q-tr>
     </template>
+    <template #top-right>
+      <q-btn color="primary" icon-right="add" label="Nuevo registro" no-caps />
+    </template>
   </q-table>
 </template>
 
