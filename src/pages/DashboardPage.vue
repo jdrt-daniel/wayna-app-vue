@@ -55,8 +55,75 @@ const events = [
 <template>
   <div class="q-my-md">
     <q-card class="wayna-card-dashboard text-white">
-      <q-card-section>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      <q-card-section horizontal>
+        <q-card-section class="col-6 text-center">
+          <h5 class="">Sorteo principal 2024</h5>
+          <div class="text-center w-full q-mb-lg">
+            <div class="bg-number">
+              <h2 class="q-ma-none text-bold">102</h2>
+              <h5 class="q-ma-none">Participantes</h5>
+            </div>
+          </div>
+          <q-btn color="primary" label="INICIAR SORTEO" />
+        </q-card-section>
+        <q-card-section class="col-6">
+          <q-list bordered class="bg-participants text-white w-full">
+            <q-item clickable v-ripple>
+              <q-avatar
+                size="40px"
+                font-size="20px"
+                color="white"
+                text-color="dark"
+                icon="person"
+                class="q-mr-md"
+              />
+              <q-item-section>Daniel Rafael</q-item-section>
+              <q-item-section
+                >Se unió el 11 de marza a las 17:00
+              </q-item-section>
+            </q-item>
+            <q-item clickable v-ripple>
+              <q-avatar
+                size="40px"
+                font-size="20px"
+                color="white"
+                text-color="dark"
+                icon="person"
+                class="q-mr-md"
+              />
+              <q-item-section>Daniel Rafael</q-item-section>
+              <q-item-section
+                >Se unió el 11 de marza a las 17:00
+              </q-item-section> </q-item
+            ><q-item clickable v-ripple>
+              <q-avatar
+                size="40px"
+                font-size="20px"
+                color="white"
+                text-color="dark"
+                icon="person"
+                class="q-mr-md"
+              />
+              <q-item-section>Daniel Rafael</q-item-section>
+              <q-item-section
+                >Se unió el 11 de marza a las 17:00
+              </q-item-section> </q-item
+            ><q-item clickable v-ripple>
+              <q-avatar
+                size="40px"
+                font-size="20px"
+                color="white"
+                text-color="dark"
+                icon="person"
+                class="q-mr-md"
+              />
+              <q-item-section>Daniel Rafael</q-item-section>
+              <q-item-section
+                >Se unió el 11 de marza a las 17:00
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-card-section>
       </q-card-section>
     </q-card>
   </div>
@@ -65,7 +132,7 @@ const events = [
     <div class="col">
       <div class="row q-col-gutter-lg">
         <div
-          class="col-md-3 col-sm-4 col-xs-12"
+          class="col-md-4 col-sm-4 col-xs-12"
           v-for="{ id, name, image, user } in events"
           :key="id"
         >
@@ -84,5 +151,19 @@ const events = [
   opacity: 1;
   background-repeat: repeat-x;
   background-position: center;
+}
+
+.bg-participants {
+  background: #302f2f93;
+  color: #ffff;
+  border-radius: 10px;
+}
+.bg-number {
+  background: #39327993;
+  color: #ffff;
+  border-radius: 10px;
+  max-width: 200px;
+  padding: 10px;
+  margin: 0 auto;
 }
 </style>
